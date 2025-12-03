@@ -1,4 +1,4 @@
-# Экзаменационный билет: Filesystem Hierarchy Standard и концепция *merged /usr*
+# Filesystem Hierarchy Standard и концепция *merged /usr*
 
 ## 1. Filesystem Hierarchy Standard (FHS): общее представление
 
