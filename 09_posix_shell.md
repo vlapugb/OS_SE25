@@ -1,4 +1,4 @@
-# Билет: POSIX: shell
+# POSIX: shell
 
 ## 1. Стандарт POSIX и роль shell
 
