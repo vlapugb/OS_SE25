@@ -355,19 +355,16 @@ POSIX определяет:
 #   Таблица открытых файлов процесса (File Descriptor Table)
 
 Это **часть пространства процесса** (user-space data structure), которую ядро заполняет при `open()`.
-
-Пример:
-Процесс P:
-┌────┬───────────────────┐
-│ FD │     Указатель     │
-├────┼───────────────────┤
-│ 0  │ → struct file* → stdin  │
-│ 1  │ → struct file* → stdout │
-│ 2  │ → struct file* → stderr │
-│ 3  │ → struct file* → text.txt│
-│ 4  │ → struct file* → /etc/passwd │
-└────┴───────────────────┘
-
+```mermaid
+table
+    title FD table (user-space part, filled by kernel on open())
+    header FD, Указатель
+    0, → struct file* → stdin
+    1, → struct file* → stdout
+    2, → struct file* → stderr
+    3, → struct file* → text.txt
+    4, → struct file* → /etc/passwd
+```
 - FD = индекс (0, 1, 2, 3…)
 - Значение = **указатель на структуру `file` в ядре**.
 
