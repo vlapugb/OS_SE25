@@ -356,14 +356,14 @@ POSIX определяет:
 
 Это **часть пространства процесса** (user-space data structure), которую ядро заполняет при `open()`.
 ```mermaid
-table
-    title FD table (user-space part, filled by kernel on open())
-    header FD, Указатель
-    0, → struct file* → stdin
-    1, → struct file* → stdout
-    2, → struct file* → stderr
-    3, → struct file* → text.txt
-    4, → struct file* → /etc/passwd
+graph TD
+    subgraph FD_table [FD table (user-space, заполнено ядром при open())]
+        FD0["0 → struct file* → stdin"]
+        FD1["1 → struct file* → stdout"]
+        FD2["2 → struct file* → stderr"]
+        FD3["3 → struct file* → text.txt"]
+        FD4["4 → struct file* → /etc/passwd"]
+    end
 ```
 - FD = индекс (0, 1, 2, 3…)
 - Значение = **указатель на структуру `file` в ядре**.
