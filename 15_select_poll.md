@@ -1,5 +1,3 @@
-
-Статья на хабре от школьника https://habr.com/ru/companies/infopulse/articles/415259/
 # Select/poll/epoll — мотивация и принципы работы
 
 ## 1. Контекст: ввод-вывод и блокирующие операции
