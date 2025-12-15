@@ -1,3 +1,5 @@
+// Author: Mikhail Sviryukov
+
 #include <stdlib.h>
 #include <pthread.h>
 #include <stdio.h>
